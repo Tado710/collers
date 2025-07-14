@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250712143252">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250714161449">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +14,18 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="96" data-scroll-show class="header">
 			<div class="header__container">
 				<a href="#" class="header__logo logo">Collers</a>
 				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<button type="button" class="menu__icon icon-menu" aria-label="menu__button"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link">Products</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Solutions</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Resources</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Log In</a></li>
+							<li class="menu__item"><a href="#" data-goto-header data-goto=".the-best" class="menu__link">Products</a></li>
+							<li class="menu__item"><a href="#" data-goto-header data-goto=".why" class="menu__link">Solutions</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
+							<li class="menu__item"><a href="#" data-goto-header data-goto=".articles" class="menu__link">Resources</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Log In</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -45,7 +45,7 @@
 							</div>
 							<div class="hero__buttons">
 								<button type="button" class="hero__button button button--big">Sign up now</button>
-								<button type="button" data-popup="#video" data-popup-youtube="YjeFnrZSOaE" class="hero__button button button--watch _icon-play">Watch Demo</button>
+								<button type="button" data-popup="#video" data-popup-youtube="YjeFnrZSOaE" class="hero__button button button--watch _icon-play" aria-label="play__button">Watch Demo</button>
 							</div>
 						</div>
 						<div class="hero__picture">
@@ -88,7 +88,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__the-best the-best">
+			<section data-watch="navigator" class="page__the-best the-best">
 				<div class="the-best__container">
 					<div class="the-best__header header-block">
 						<h2 class="header-block__title title title--white">The best of the best</h2>
@@ -151,7 +151,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__why why">
+			<section data-watch="navigator" class="page__why why">
 				<div class="why__container">
 					<div class="why__content">
 						<h2 class="why__title title">Why join us</h2>
@@ -171,7 +171,7 @@
 								<div class="video-why__video-player">
 									<video class="video-why__video" src="files/video.mp4" poster="img/why/01.webp" playsinline preload="auto" controls>
 									</video>
-									<button type="button" class="video-why__play">
+									<button type="button" class="video-why__play" aria-label="video-play__button">
 										<svg xmlns="http://www.w3.org/2000/svg" width="96" height="97" viewBox="0 0 96 97" fill="none">
 											<path d="M71.28 50.592C71.5608 50.1512 71.7502 49.6585 71.837 49.1432C71.9238 48.6278 71.9062 48.1003 71.7854 47.5918C71.6645 47.0834 71.4428 46.6044 71.1334 46.1832C70.8239 45.7621 70.4331 45.4073 69.984 45.14L30.296 21.012C29.6506 20.6213 28.9104 20.4152 28.156 20.416C25.916 20.416 24.104 22.188 24.104 24.376V72.62C24.104 73.36 24.316 74.084 24.716 74.712C25.9 76.568 28.396 77.136 30.296 75.98L69.984 51.856C70.508 51.536 70.956 51.1 71.284 50.588L71.28 50.592ZM74.264 58.58L34.58 82.704C28.88 86.172 21.38 84.464 17.836 78.9C16.6378 77.0245 16.0008 74.8456 16 72.62V24.38C16 17.816 21.44 12.5 28.16 12.5C30.428 12.5 32.652 13.12 34.58 14.292L74.264 38.42C79.964 41.884 81.712 49.204 78.164 54.772C77.18 56.316 75.844 57.62 74.264 58.58V58.58Z" fill="white" />
 										</svg>
@@ -192,8 +192,8 @@
 				<div class="because__header header-block">
 					<h2 class="header-block__title title">Because they love us</h2>
 					<div class="header-block__arrows">
-						<button type="button" class="header-block__arrow arrow arrow--prev _icon-arrow-right"></button>
-						<button type="button" class="header-block__arrow arrow arrow--next _icon-arrow-right"></button>
+						<button type="button" class="header-block__arrow arrow arrow--prev _icon-arrow-right" aria-label="arrow-prev__button"></button>
+						<button type="button" class="header-block__arrow arrow arrow--next _icon-arrow-right" aria-label="arrow-next__button"></button>
 					</div>
 				</div>
 				<div class="because__body">
@@ -448,7 +448,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__articles articles">
+			<section data-watch="navigator" class="page__articles articles">
 				<div class="articles__container">
 					<div class="articles__header header-block">
 						<h2 class="header-block__title title">Articles by Collectors</h2>
@@ -678,12 +678,11 @@
 				</button>
 
 				<div data-popup-youtube-place class="popup__video">
-
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250712143252"></script>
+	<script src="js/app.min.js?_v=20250714161449"></script>
 </body>
 
 </html>

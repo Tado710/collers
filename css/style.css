@@ -170,6 +170,9 @@ body {
   color: #78350f;
   position: relative
 }
+.menu__link._navigator-active::after {
+  width: 100%
+}
 .menu__link::after {
   position: absolute;
   content: "";
@@ -399,6 +402,23 @@ body::after {
 }
 .arrow--prev::before {
   rotate: 180deg
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50
+}
+.header._header-scroll {
+  opacity: 0;
+  visibility: hidden
+}
+.header._header-show {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(254,243,199,.7);
+  transition: all .5s
 }
 .header__container {
   padding-top: 1rem;
