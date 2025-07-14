@@ -1485,7 +1485,7 @@ body::after {
     column-gap: 5rem
   }
   .hero__body {
-    padding-top: 5rem
+    padding-top: 11rem
   }
   .hero__body {
     padding-bottom: 5rem
@@ -1954,7 +1954,7 @@ body::after {
     padding-bottom: 3rem
   }
   .hero__body {
-    padding-top: 3rem
+    padding-top: 7.1875rem
   }
   .hero__body {
     padding-bottom: 3rem
@@ -2207,7 +2207,7 @@ body::after {
     padding-bottom: clamp(3rem ,2.1428571429rem + 3.4896401309vw ,5rem)
   }
   .hero__body {
-    padding-top: clamp(3rem ,2.1428571429rem + 3.4896401309vw ,5rem)
+    padding-top: clamp(7.1875rem ,5.5535714286rem + 6.6521264995vw ,11rem)
   }
   .hero__body {
     padding-bottom: clamp(3rem ,2.1428571429rem + 3.4896401309vw ,5rem)
