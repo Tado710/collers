@@ -261,9 +261,7 @@ body::after {
 }
 .popup__video {
   position: relative;
-  overflow: hidden;
-  max-width: 31.25rem;
-  min-height: 15.625rem
+  overflow: hidden
 }
 .popup__video embed,
 .popup__video iframe,
