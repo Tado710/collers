@@ -447,6 +447,11 @@
                     popup: this
                 }
             }));
+            const videoElement = this.targetOpen.element.querySelector(".video-player__video");
+            if (videoElement) {
+                videoElement.pause();
+                videoElement.currentTime = 0;
+            }
             if (this.youTubeCode) if (this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)) this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = "";
             this.previousOpen.element.classList.remove(this.options.classes.popupActive);
             this.previousOpen.element.setAttribute("aria-hidden", "true");
@@ -4008,7 +4013,7 @@
     const da = new DynamicAdapt("max");
     da.init();
     function toggleVideo(e) {
-        const parentEl = e.target.closest(".video-why__video-player");
+        const parentEl = e.target.closest(".video-player");
         if (parentEl) {
             const video = parentEl.querySelector("video");
             if (video.paused) {

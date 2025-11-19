@@ -259,20 +259,6 @@ body::after {
 .popup__close {
   align-self: flex-end
 }
-.popup__video {
-  position: relative;
-  overflow: hidden
-}
-.popup__video embed,
-.popup__video iframe,
-.popup__video object,
-.popup__video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%
-}
 .ibg {
   width: 100%;
   height: 100%;
@@ -412,6 +398,72 @@ body::after {
 }
 .arrow--prev::before {
   rotate: 180deg
+}
+.video-player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 520/309;
+  max-width: 32.5rem
+}
+.video-player._playing .video-player__play {
+  opacity: 0
+}
+.video-player img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.video-player__video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.video-player__video embed,
+.video-player__video iframe,
+.video-player__video object,
+.video-player__video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.video-player__play {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 9rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border-radius: 6.25rem;
+  background: rgba(18,22,25,.75);
+  transition: background-color .3s,opacity .5s
+}
+.video-why__block .video-why__player._playing {
+  z-index: 2
+}
+.popup .video-player {
+  aspect-ratio: 700/400;
+  max-width: 43.75rem
+}
+.popup .video-player__video embed,
+.popup .video-player__video iframe,
+.popup .video-player__video object,
+.popup .video-player__video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .header {
   position: fixed;
@@ -615,10 +667,26 @@ body::after {
   row-gap: 1rem;
   text-align: left
 }
+.item-hero__icon {
+  width: 4rem;
+  height: 4rem;
+  position: relative
+}
+.item-hero__icon::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 3.75rem;
+  height: 3.75rem
+}
+.item-hero__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
 .item-hero--1 .item-hero__icon::before {
   right: -1.4375rem;
-  width: 3.75rem;
-  height: 3.75rem;
   background: url(../img/icons/triangle-blue.svg) 0 0 no-repeat
 }
 .item-hero--2 .item-hero__icon::before {
@@ -632,18 +700,6 @@ body::after {
   border-radius: 50%;
   opacity: .5;
   background: #a21caf
-}
-.item-hero__icon {
-  width: 4rem;
-  height: 4rem;
-  position: relative
-}
-.item-hero__icon::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  width: 3.75rem;
-  height: 3.75rem
 }
 .item-hero__title {
   font-family: Roboto;
@@ -718,7 +774,7 @@ body::after {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  transition: all .5s
+  transition: all .4s
 }
 .item-the-best__body {
   flex: 1 1 auto;
@@ -791,7 +847,6 @@ body::after {
   border: .3125rem solid #fff;
   background: #fff;
   box-shadow: 0 25px 50px -12px rgba(0,0,0,.25),0 0 15px 0 rgba(0,0,0,.07);
-  z-index: 1;
   position: relative
 }
 .video-why__top-bar {
@@ -803,53 +858,6 @@ body::after {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover
-}
-.video-why__video-player {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 520/309;
-  max-width: 32.5rem
-}
-.video-why__video-player img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
-}
-.video-why__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
-}
-.video-why__video embed,
-.video-why__video iframe,
-.video-why__video object,
-.video-why__video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
-}
-.video-why__play {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 9rem;
-  height: 9rem;
-  border-radius: 50%;
-  border-radius: 6.25rem;
-  background: rgba(18,22,25,.75);
-  transition: background-color .3s,opacity .5s
 }
 .video-why .video-why__decor-yellow {
   position: absolute;
@@ -893,16 +901,6 @@ body::after {
   opacity: .75;
   background: #b45309;
   z-index: -1
-}
-.video-why__video-player._playing {
-  z-index: 1
-}
-._playing .video-why {
-  pointer-events: none;
-  opacity: 0
-}
-._playing .video-why__play {
-  opacity: 0
 }
 .because__header {
   display: flex;
@@ -1023,6 +1021,10 @@ body::after {
   max-width: 59rem;
   position: relative
 }
+.tabs-collection__image {
+  border-radius: .625rem;
+  overflow: hidden
+}
 .tabs-collection__image--1 {
   align-self: flex-start;
   aspect-ratio: 759/453;
@@ -1040,8 +1042,7 @@ body::after {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
-  border-radius: .625rem
+  object-fit: contain
 }
 .shoes-collected {
   background-color: #78350f
@@ -1184,7 +1185,7 @@ body::after {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  transition: all .5s
+  transition: all .4s
 }
 .item-articles__body {
   flex: 1 1 auto;
@@ -1279,7 +1280,7 @@ body::after {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  transition: all .5s
+  transition: all .4s
 }
 .collect-more {
   background-color: #0f172a
@@ -1546,12 +1547,6 @@ body::after {
   }
   .why__container {
     padding-bottom: 5rem
-  }
-  .why__container {
-    padding-right: 5rem
-  }
-  .why__container {
-    padding-left: 5rem
   }
   .why__item {
     font-size: 1.25rem
@@ -2011,12 +2006,6 @@ body::after {
   .why__container {
     padding-bottom: 2rem
   }
-  .why__container {
-    padding-right: 1rem
-  }
-  .why__container {
-    padding-left: 1rem
-  }
   .why__item {
     font-size: 1rem
   }
@@ -2264,12 +2253,6 @@ body::after {
   .why__container {
     padding-bottom: clamp(2rem ,.7142857143rem + 5.2344601963vw ,5rem)
   }
-  .why__container {
-    padding-right: clamp(1rem ,-.7142857143rem + 6.9792802617vw ,5rem)
-  }
-  .why__container {
-    padding-left: clamp(1rem ,-.7142857143rem + 6.9792802617vw ,5rem)
-  }
   .why__item {
     font-size: clamp(1rem ,.8928571429rem + .4362050164vw ,1.25rem)
   }
@@ -2508,6 +2491,9 @@ body::after {
   .arrow:hover::before {
     color: #fef3c7
   }
+  .video-player__play:hover {
+    background: rgba(41,50,57,.75)
+  }
   .item-footer__item-link:hover {
     color: #fef3c7
   }
@@ -2518,16 +2504,13 @@ body::after {
     color: #fef3c7
   }
   .item-the-best__image:hover img {
-    scale: 1.05
+    scale: 1.01
   }
   .item-the-best__title-link:hover {
     color: #fef3c7
   }
-  .video-why__play:hover {
-    background: rgba(41,50,57,.75)
-  }
   .item-articles__image:hover img {
-    scale: 1.05
+    scale: 1.02
   }
   .item-articles__title-link:hover {
     color: #78350f
@@ -2536,6 +2519,6 @@ body::after {
     color: #78350f
   }
   .item-events__image:hover img {
-    scale: 1.05
+    scale: 1.02
   }
 }

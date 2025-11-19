@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250714162732">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251119161450">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,8 @@
 							</div>
 							<div class="hero__buttons">
 								<button type="button" class="hero__button button button--big">Sign up now</button>
-								<button type="button" data-popup="#video" data-popup-youtube="YjeFnrZSOaE" class="hero__button button button--watch _icon-play" aria-label="play__button">Watch Demo</button>
+								<button type="button" data-popup="#video" class="hero__button button button--watch _icon-play" aria-label="play__button">Watch
+									Demo</button>
 							</div>
 						</div>
 						<div class="hero__picture">
@@ -168,10 +169,10 @@
 								<div class="video-why__top-bar">
 									<img src="img/why/top-bar.webp" alt="Image">
 								</div>
-								<div class="video-why__video-player">
-									<video class="video-why__video" src="files/video.mp4" poster="img/why/01.webp" playsinline preload="auto" controls>
+								<div class="video-why__player video-player">
+									<video class="video-player__video" src="files/video.mp4" poster="img/why/01.webp" playsinline preload="auto" controls>
 									</video>
-									<button type="button" class="video-why__play" aria-label="video-play__button">
+									<button type="button" class="video-player__play" aria-label="video-play__button">
 										<svg xmlns="http://www.w3.org/2000/svg" width="96" height="97" viewBox="0 0 96 97" fill="none">
 											<path d="M71.28 50.592C71.5608 50.1512 71.7502 49.6585 71.837 49.1432C71.9238 48.6278 71.9062 48.1003 71.7854 47.5918C71.6645 47.0834 71.4428 46.6044 71.1334 46.1832C70.8239 45.7621 70.4331 45.4073 69.984 45.14L30.296 21.012C29.6506 20.6213 28.9104 20.4152 28.156 20.416C25.916 20.416 24.104 22.188 24.104 24.376V72.62C24.104 73.36 24.316 74.084 24.716 74.712C25.9 76.568 28.396 77.136 30.296 75.98L69.984 51.856C70.508 51.536 70.956 51.1 71.284 50.588L71.28 50.592ZM74.264 58.58L34.58 82.704C28.88 86.172 21.38 84.464 17.836 78.9C16.6378 77.0245 16.0008 74.8456 16 72.62V24.38C16 17.816 21.44 12.5 28.16 12.5C30.428 12.5 32.652 13.12 34.58 14.292L74.264 38.42C79.964 41.884 81.712 49.204 78.164 54.772C77.18 56.316 75.844 57.62 74.264 58.58V58.58Z" fill="white" />
 										</svg>
@@ -676,13 +677,19 @@
 						<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
 					</svg>
 				</button>
-
-				<div data-popup-youtube-place class="popup__video">
+				<div class="popup__player video-player">
+					<video class="video-player__video" src="files/video.mp4" playsinline preload="auto" controls>
+					</video>
+					<button type="button" class="video-player__play" aria-label="video-play__button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="96" height="97" viewBox="0 0 96 97" fill="none">
+							<path d="M71.28 50.592C71.5608 50.1512 71.7502 49.6585 71.837 49.1432C71.9238 48.6278 71.9062 48.1003 71.7854 47.5918C71.6645 47.0834 71.4428 46.6044 71.1334 46.1832C70.8239 45.7621 70.4331 45.4073 69.984 45.14L30.296 21.012C29.6506 20.6213 28.9104 20.4152 28.156 20.416C25.916 20.416 24.104 22.188 24.104 24.376V72.62C24.104 73.36 24.316 74.084 24.716 74.712C25.9 76.568 28.396 77.136 30.296 75.98L69.984 51.856C70.508 51.536 70.956 51.1 71.284 50.588L71.28 50.592ZM74.264 58.58L34.58 82.704C28.88 86.172 21.38 84.464 17.836 78.9C16.6378 77.0245 16.0008 74.8456 16 72.62V24.38C16 17.816 21.44 12.5 28.16 12.5C30.428 12.5 32.652 13.12 34.58 14.292L74.264 38.42C79.964 41.884 81.712 49.204 78.164 54.772C77.18 56.316 75.844 57.62 74.264 58.58V58.58Z" fill="white" />
+						</svg>
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250714162732"></script>
+	<script src="js/app.min.js?_v=20251119161450"></script>
 </body>
 
 </html>
